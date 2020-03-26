@@ -1,0 +1,30 @@
+sudo apt-get update
+sudo apt-get update instal gcc make perl
+sudo apt-get upgrade
+
+
+/// SHH///
+1) sudo apt-get install openssh-server
+
+2) ip a узнаем ip VB
+
+3) набираем в командной строке win shh name@ip и подключаемся
+
+4) генерируем SSH и создаем на локально месте файл с этим ключем
+
+5) копируем на виртуальной машине ключ SSH
+sudo ufw cp ~/.ssh/id_rsa.pub ~/.ssh/authorized_keys
+
+6) теперь в командной строе локальной машине достаточно набрать
+ssh name@ip -i путь ключу и подключиться в ubuntu
+
+
+порт
+
+sudo ufw status -статус фаевола
+sudo ufw enable - включит его
+указываем политику по умолчанию
+sudo ufw default deny incoming - Все входящие пакеты будем отклонять
+sudo ufw default allow outgoing - все исходящие разрешим
+и последнее
+sudo ufw allow 22
